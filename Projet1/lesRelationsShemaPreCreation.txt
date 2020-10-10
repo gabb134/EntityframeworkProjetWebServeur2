@@ -1,0 +1,9 @@
+Entreprise_AddressType  <--> Entreprise_Address : ONE-to-MANY
+
+Entreprise_Address <--> Entreprise_Entreprise :  ONE-to-MANY
+
+Entreprise_Entreprise <--> Employee_Employee : MANY-to-ONE
+
+Employee_Employee <--> Employee_PhoneNumber : MANY-to-ONE
+
+Employee_PhoneNumber <--> Employee_PhoneNumberType :MANY-to-ONE

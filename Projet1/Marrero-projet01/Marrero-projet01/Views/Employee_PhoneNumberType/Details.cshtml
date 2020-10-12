@@ -1,0 +1,40 @@
+﻿@model Marrero_projet01.Models.Employee_PhoneNumberType
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Détails de type de téléphone</div>
+    <div class="panel panel-body">
+        <div>
+      
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.PhoneNumbertype)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumbertype)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Modifier", "Edit", new { id = Model.PhoneNumberTypeID }) |
+            @Html.ActionLink("Retour à la liste", "Index")
+        </p>
+    </div>
+</div>

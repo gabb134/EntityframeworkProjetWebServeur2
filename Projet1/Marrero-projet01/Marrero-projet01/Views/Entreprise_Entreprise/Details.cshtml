@@ -1,0 +1,55 @@
+﻿@model Marrero_projet01.Models.Entreprise_Entreprise
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Détails d'une entreprise</div>
+    <div class="panel panel-body">
+        <div>
+            <h4>Entreprise_Entreprise</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.EntrepriseName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EntrepriseName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EntrepriseNote)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EntrepriseNote)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateInscrit)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DateInscrit)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateMod)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DateMod)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.EntrepriseID }) |
+    @Html.ActionLink("Retour à la liste", "Index")
+</p>

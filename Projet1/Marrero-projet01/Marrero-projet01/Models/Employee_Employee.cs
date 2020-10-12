@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -18,9 +19,10 @@ namespace Marrero_projet01.Models
     [Titre] nvarchar(50)  NOT NULL,
 	[Department] nvarchar(50)  NOT NULL,
     [ModifiedDate*/
-
-        public int IdEmployee { get; set; }
+        [Key]
+        public int EmployeeID { get; set; }
         [Required(ErrorMessage = "Ce champ est obligatoire!")]
+        [Display(Name ="Nom")]
         public string FirstName { get; set; }
         [Required(ErrorMessage = "Ce champ est obligatoire!")]
         public string MiddleName { get; set; }
@@ -29,13 +31,15 @@ namespace Marrero_projet01.Models
         [Required(ErrorMessage = "Ce champ est obligatoire!")]
         public string Gender { get; set; }
         [Required(ErrorMessage = "Ce champ est obligatoire!")]
+       // [RegularExpression(@"^[A-Za-z]{1,3}\.[A-Za-z]{2,10}$", ErrorMessage = "Mauvais format de courriel !")]
         public string EmailAddress { get; set; }
         [Required(ErrorMessage = "Ce champ est obligatoire!")]
         public string Titre { get; set; }
         [Required(ErrorMessage = "Ce champ est obligatoire!")]
         public string Departement { get; set; }
-        [Required(ErrorMessage = "Ce champ est obligatoire!")]
+      //  [Required(ErrorMessage = "Ce champ est obligatoire!")]
         public DateTime ModifiedDate { get; set; }
+        public int EntrepriseID { get; set; }
 
 
 

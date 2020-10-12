@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Marrero_projet01.Models.Employee_PhoneNumberType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<p>
+    @Html.ActionLink("Ajouter un type de téléphone", "Create")
+</p>
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Liste des types de téléphones</div>
+    <div class="panel panel-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhoneNumbertype)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumbertype)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Modifier", "Edit", new { id = item.PhoneNumberTypeID }) |
+                        @Html.ActionLink("Détails", "Details", new { id = item.PhoneNumberTypeID }) |
+                        @Html.ActionLink("Supprimer", "Delete", new { id = item.PhoneNumberTypeID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

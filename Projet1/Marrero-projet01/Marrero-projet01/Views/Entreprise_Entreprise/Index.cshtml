@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Marrero_projet01.Models.Entreprise_Entreprise>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<p>
+    @Html.ActionLink("Ajouter une entreprise", "Create")
+</p>
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Liste des entreprises</div>
+    <div class="panel panel-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EntrepriseName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EntrepriseNote)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateInscrit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateMod)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EntrepriseName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EntrepriseNote)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateInscrit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateMod)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Modifier", "Edit", new { id = item.EntrepriseID }) |
+                        @Html.ActionLink("Détails", "Details", new { id = item.EntrepriseID }) |
+                        @Html.ActionLink("Supprimer", "Delete", new { id = item.EntrepriseID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

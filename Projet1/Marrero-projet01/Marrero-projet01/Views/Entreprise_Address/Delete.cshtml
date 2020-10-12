@@ -1,0 +1,112 @@
+﻿@model Marrero_projet01.Models.Entreprise_Address
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Supprimer l'adresse d'une entreprise</div>
+    <div class="panel panel-body">
+
+        <h3>Voulez-vous vraiment supprimer cette adresse?</h3>
+        <div>
+       
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.AddressType.AddressType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AddressType.AddressType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Entreprise.EntrepriseName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Entreprise.EntrepriseName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AddressLine1)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AddressLine1)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AddressLine2)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AddressLine2)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Province)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Province)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Country)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Country)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PostalCode)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EntrepriseAddWeb)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EntrepriseAddWeb)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                @Html.ActionLink("Retour à la liste", "Index")
+            </div>
+            }
+        </div>
+    </div>
+</div>
+

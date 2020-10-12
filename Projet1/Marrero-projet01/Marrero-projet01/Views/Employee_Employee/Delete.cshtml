@@ -1,0 +1,102 @@
+﻿@model Marrero_projet01.Models.Employee_Employee
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Supprimer l'employé</div>
+    <div class="panel panel-body">
+        <h4>Voulez-vous vraiment supprimer cet employé?</h4>
+        <div>
+       
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Entreprise.EntrepriseName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Entreprise.EntrepriseName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MiddleName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MiddleName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Titre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Titre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Departement)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Departement)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                @Html.ActionLink("Retour à la liste", "Index")
+            </div>
+            }
+        </div>
+    </div>
+</div>

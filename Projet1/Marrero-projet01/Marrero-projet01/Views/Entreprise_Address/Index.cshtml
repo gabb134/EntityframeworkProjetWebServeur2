@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Marrero_projet01.Models.Entreprise_Address>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<p>
+    @Html.ActionLink("Ajouter une entreprise", "Create")
+</p>
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Liste d'adresses des entreprises</div>
+    <div class="panel panel-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entreprise.EntrepriseName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddressType.AddressType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddressLine1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddressLine2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Province)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EntrepriseAddWeb)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Entreprise.EntrepriseName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressType.AddressType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressLine1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressLine2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Province)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostalCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EntrepriseAddWeb)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Modifier", "Edit", new { id = item.AddressID }) |
+                        @Html.ActionLink("Détails", "Details", new { id = item.AddressID }) |
+                        @Html.ActionLink("Supprimer", "Delete", new { id = item.AddressID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

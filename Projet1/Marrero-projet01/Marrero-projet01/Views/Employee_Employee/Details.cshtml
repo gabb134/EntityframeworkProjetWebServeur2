@@ -1,0 +1,95 @@
+﻿@model Marrero_projet01.Models.Employee_Employee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Détails d'employé</div>
+    <div class="panel panel-body">
+        <div>
+
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Entreprise.EntrepriseName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Entreprise.EntrepriseName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MiddleName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MiddleName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Titre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Titre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Departement)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Departement)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+            </dl>
+        </div>
+
+        <p>
+            @Html.ActionLink("Modifier", "Edit", new { id = Model.EmployeeID }) |
+            @Html.ActionLink("Retour à la liste", "Index")
+        </p>
+    </div>
+</div>

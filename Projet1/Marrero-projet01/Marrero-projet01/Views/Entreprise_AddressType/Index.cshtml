@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Marrero_projet01.Models.Entreprise_AddressType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<p>
+    @Html.ActionLink("Ajouter un type d'adresse", "Create")
+</p>
+
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Liste des types d'adresses</div>
+    <div class="panel panel-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddressType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Modifier", "Edit", new { id = item.AddressTypeID }) |
+                        @Html.ActionLink("Détails", "Details", new { id = item.AddressTypeID }) |
+                        @Html.ActionLink("Supprimer", "Delete", new { id = item.AddressTypeID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

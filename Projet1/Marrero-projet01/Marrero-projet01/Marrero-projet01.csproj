@@ -127,6 +127,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Context\CustomerManagementContext.cs" />
+    <Compile Include="Controllers\Employee_EmployeeController.cs" />
+    <Compile Include="Controllers\Employee_PhoneNumberController.cs" />
+    <Compile Include="Controllers\Employee_PhoneNumberTypeController.cs" />
+    <Compile Include="Controllers\Entreprise_AddressController.cs" />
+    <Compile Include="Controllers\Entreprise_AddressTypeController.cs" />
+    <Compile Include="Controllers\Entreprise_EntrepriseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -161,7 +168,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -175,6 +184,36 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Entreprise_Entreprise\Create.cshtml" />
+    <Content Include="Views\Entreprise_Entreprise\Delete.cshtml" />
+    <Content Include="Views\Entreprise_Entreprise\Details.cshtml" />
+    <Content Include="Views\Entreprise_Entreprise\Edit.cshtml" />
+    <Content Include="Views\Entreprise_Entreprise\Index.cshtml" />
+    <Content Include="Views\Employee_Employee\Create.cshtml" />
+    <Content Include="Views\Employee_Employee\Delete.cshtml" />
+    <Content Include="Views\Employee_Employee\Details.cshtml" />
+    <Content Include="Views\Employee_Employee\Edit.cshtml" />
+    <Content Include="Views\Employee_Employee\Index.cshtml" />
+    <Content Include="Views\Employee_PhoneNumber\Create.cshtml" />
+    <Content Include="Views\Employee_PhoneNumber\Delete.cshtml" />
+    <Content Include="Views\Employee_PhoneNumber\Details.cshtml" />
+    <Content Include="Views\Employee_PhoneNumber\Edit.cshtml" />
+    <Content Include="Views\Employee_PhoneNumber\Index.cshtml" />
+    <Content Include="Views\Employee_PhoneNumberType\Create.cshtml" />
+    <Content Include="Views\Employee_PhoneNumberType\Delete.cshtml" />
+    <Content Include="Views\Employee_PhoneNumberType\Details.cshtml" />
+    <Content Include="Views\Employee_PhoneNumberType\Edit.cshtml" />
+    <Content Include="Views\Employee_PhoneNumberType\Index.cshtml" />
+    <Content Include="Views\Entreprise_AddressType\Create.cshtml" />
+    <Content Include="Views\Entreprise_AddressType\Delete.cshtml" />
+    <Content Include="Views\Entreprise_AddressType\Details.cshtml" />
+    <Content Include="Views\Entreprise_AddressType\Edit.cshtml" />
+    <Content Include="Views\Entreprise_AddressType\Index.cshtml" />
+    <Content Include="Views\Entreprise_Address\Create.cshtml" />
+    <Content Include="Views\Entreprise_Address\Delete.cshtml" />
+    <Content Include="Views\Entreprise_Address\Details.cshtml" />
+    <Content Include="Views\Entreprise_Address\Edit.cshtml" />
+    <Content Include="Views\Entreprise_Address\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
